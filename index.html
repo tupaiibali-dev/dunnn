@@ -3,14 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to Telegram...</title>
-    
-    <!-- Авто-редирект -->
-    <meta http-equiv="refresh" content="0; url=https://t.me/+T-jsvpXSlSNkNmUy">
-    <script type="text/javascript">
-        window.location.href = "https://t.me/+T-jsvpXSlSNkNmUy";
-    </script>
-
+    <title>Welcome</title>
     <style>
         body, html {
             margin: 0;
@@ -19,83 +12,61 @@
             height: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #1d2b64, #f8cdda);
+            align-items: center; 
+            
+            /* Подключаем твою фотку image */
+            background-image: url('image'); 
+            
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden; 
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            padding: 40px 30px;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 320px;
-            width: 90%;
-        }
-
-        .tg-logo {
-            width: 80px;
-            height: 80px;
-            background: #24A1DE;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 20px;
-            box-shadow: 0 4px 15px rgba(36, 161, 222, 0.3);
-        }
-
-        .tg-logo svg {
-            width: 45px;
-            height: 45px;
-            fill: white;
-            margin-right: 4px;
-        }
-
-        h2 {
-            color: #2c3e50;
-            font-size: 22px;
-            margin: 0 0 10px 0;
-        }
-
-        p {
-            color: #7f8c8d;
-            font-size: 14px;
-            margin: 0 0 25px 0;
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); 
+            z-index: 1;
         }
 
         .btn {
+            position: relative; 
+            z-index: 2;
             display: inline-block;
-            background: #24A1DE;
-            color: white;
+            background: linear-gradient(135deg, #24A1DE 0%, #1a8cc3 100%);
+            color: #ffffff;
             text-decoration: none;
-            padding: 14px 30px;
-            border-radius: 50px;
+            padding: 20px 45px; 
+            border-radius: 60px;
             font-weight: bold;
-            font-size: 16px;
-            transition: background 0.2s;
-            box-shadow: 0 4px 15px rgba(36, 161, 222, 0.2);
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease; 
+            border: 2px solid rgba(255, 255, 255, 0.2); 
         }
 
         .btn:hover {
-            background: #1d82b3;
+            transform: translateY(-3px) scale(1.02); 
+            box-shadow: 0 15px 40px rgba(36, 161, 222, 0.5); 
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="tg-logo">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.76-2.53 2.81-2.75.01-.03.01-.1-.04-.14-.04-.04-.1-.03-.14-.02-.07.01-1.14.72-3.22 2.13-.3.21-.58.31-.83.3-.27-.01-.8-.15-1.19-.28-.48-.15-.86-.23-.83-.5.02-.13.2-.27.56-.42 2.19-.95 3.65-1.58 4.38-1.89 2.08-.88 2.52-1.03 2.8-.1.06.03.18.2.17.38z"/>
-            </svg>
-        </div>
-        <h2>Join Channel</h2>
-        <p>If you are not redirected automatically, click the button below</p>
-        <a href="https://t.me/+T-jsvpXSlSNkNmUy" class="btn">Open Telegram</a>
-    </div>
+    <a href="https://t.me/+T-jsvpXSlSNkNmUy" class="btn">Open Telegram</a>
 
 </body>
 </html>
